@@ -29,7 +29,7 @@ Bandwidth turns a semester of deadlines into a **week-by-week workload skyline**
 - **Course color legend** — every course gets a consistent color across the dashboard
 - **Scroll-reveal animations, animated counters, and hover micro-interactions** throughout
 - **Fully responsive** — sidebar collapses to a top bar, grids stack on mobile
-- **Zero backend** — all data lives in the browser via `localStorage`; no sign-up, no server
+
 
 ## Pages
 
@@ -55,20 +55,8 @@ Plain **HTML / CSS / JavaScript** — no framework, no build step, no dependenci
 └── og-image.png                # Social share preview image
 ```
 
-## Running Locally
-
-No build step required — just serve the folder statically:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000` in your browser.
-
 ## Research
 
 Farooq M, Hafeez U, Ahmad A, Waller S, Andrade G, Cevik AA, et al. (2026). *Academic workload and lifestyle predict emotional well-being among university students in the United Arab Emirates: A cross-sectional study.* PLOS ONE, 21(4): e0347553. [doi.org/10.1371/journal.pone.0347553](https://doi.org/10.1371/journal.pone.0347553)
 
----
 
-Built with care for DesignAthon 2026. #designathon2026

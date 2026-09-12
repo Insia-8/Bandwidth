@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bandwidth — see your semester before it sees you</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:title" content="Bandwidth — see your semester before it sees you" />
+<meta property="og:description" content="A week-by-week workload skyline for your semester, so crunch weeks show up before they happen." />
+<meta property="og:image" content="https://insia-8.github.io/Bandwidth/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://insia-8.github.io/Bandwidth/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="topnav">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="14" width="4" height="8" rx="1" fill="#4F9D6E"/>
+        <rect x="10" y="9" width="4" height="13" rx="1" fill="#E3AE3C"/>
+        <rect x="18" y="3" width="4" height="19" rx="1" fill="#D6483C"/>
+      </svg>
+      Bandwidth
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="problem-solution.html">Problem &amp; Solution</a>
+    </div>
+    <a href="dashboard.html" class="btn-primary">Get Started →</a>
+  </nav>
+
+  <section class="home-hero">
+    <div>
+      <p class="eyebrow">Before the crunch hits</p>
+      <h1>See your semester before it sees you.</h1>
+      <p class="lead">Add every deadline once. Bandwidth stacks them into a week-by-week workload view, so you see the heavy weeks coming instead of living through them.</p>
+      <div class="hero-actions">
+        <a href="dashboard.html" class="btn-primary">Get Started →</a>
+        <a href="problem-solution.html" class="watch-link">▷ See how it works</a>
+      </div>
+    </div>
+    <div class="home-skyline-wrap">
+      <div id="home-chart"></div>
+      <div class="home-month-labels" id="home-chart-labels"></div>
+    </div>
+  </section>
+
+  <div class="value-props">
+    <div class="value-prop reveal" style="transition-delay:0s;">
+      <span class="icon-badge" style="background:rgba(79,157,110,0.14);">📚</span>
+      <h4>Add your courses</h4>
+      <p>Courses, deadlines, and estimated effort.</p>
+    </div>
+    <div class="value-prop reveal" style="transition-delay:0.08s;">
+      <span class="icon-badge" style="background:rgba(227,174,60,0.16);">📈</span>
+      <h4>See your workload</h4>
+      <p>One semester-wide view, not scattered dates.</p>
+    </div>
+    <div class="value-prop reveal" style="transition-delay:0.16s;">
+      <span class="icon-badge" style="background:rgba(232,130,60,0.16);">🔥</span>
+      <h4>Spot pressure early</h4>
+      <p>Catch pressure while you still have time to plan.</p>
+    </div>
+    <div class="value-prop reveal" style="transition-delay:0.24s;">
+      <span class="icon-badge" style="background:rgba(214,72,60,0.14);">🧭</span>
+      <h4>Plan ahead</h4>
+      <p>Know exactly where to start.</p>
+    </div>
+  </div>
+
+  <div class="how-it-works">
+    <p class="section-label">How It Works</p>
+    <div class="how-steps">
+      <div class="how-step reveal" style="transition-delay:0s;">
+        <span class="how-num">01</span>
+        <h4>Add</h4>
+        <p>Log your courses and deadlines with an estimated effort in hours.</p>
+      </div>
+      <div class="how-step reveal" style="transition-delay:0.08s;">
+        <span class="how-num">02</span>
+        <h4>Visualize</h4>
+        <p>Bandwidth stacks them into a week-by-week workload skyline.</p>
+      </div>
+      <div class="how-step reveal" style="transition-delay:0.16s;">
+        <span class="how-num">03</span>
+        <h4>Act</h4>
+        <p>Click a heavy week to see what's driving it and where to start.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="closing-band reveal">
+  <div class="wrap closing-band-inner">
+    <p>See your semester before it sees you.</p>
+    <a href="dashboard.html" class="btn-primary btn-light">Get Started →</a>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>Built for DesignAthon 2026 · GDC RIT Dubai in partnership with +TWE</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Problem & Solution — Bandwidth</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:title" content="Bandwidth — see your semester before it sees you" />
+<meta property="og:description" content="A week-by-week workload skyline for your semester, so crunch weeks show up before they happen." />
+<meta property="og:image" content="https://insia-8.github.io/Bandwidth/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://insia-8.github.io/Bandwidth/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="topnav">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="14" width="4" height="8" rx="1" fill="#4F9D6E"/>
+        <rect x="10" y="9" width="4" height="13" rx="1" fill="#E3AE3C"/>
+        <rect x="18" y="3" width="4" height="19" rx="1" fill="#D6483C"/>
+      </svg>
+      Bandwidth
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="problem-solution.html" class="active">Problem &amp; Solution</a>
+    </div>
+    <a href="dashboard.html" class="btn-primary">Get Started →</a>
+  </nav>
+
+  <section class="hero">
+    <p class="eyebrow">Problem &amp; Solution</p>
+    <h1>See your semester before it sees you.</h1>
+    <p>Students can see individual deadlines. They can't see the workload collision coming.</p>
+  </section>
+
+  <section class="section">
+    <p class="section-label">The Problem</p>
+    <div class="problem-split">
+      <div class="reveal">
+        <h2>The deadlines aren't the problem. The collision is.</h2>
+        <p class="lead">Each of these looks manageable on its own.</p>
+
+        <div class="deadline-cards">
+          <div class="deadline-card reveal" style="border-left:3px solid #3E7CB1;">
+            <p class="course">Database Systems</p>
+            <p class="task">Assignment</p>
+            <p class="meta">Due Mon · ~8 hours</p>
+          </div>
+          <div class="deadline-card reveal" style="border-left:3px solid var(--low);transition-delay:0.08s;">
+            <p class="course">Machine Learning</p>
+            <p class="task">Lab</p>
+            <p class="meta">Due Wed · ~6 hours</p>
+          </div>
+          <div class="deadline-card reveal" style="border-left:3px solid var(--mid);transition-delay:0.16s;">
+            <p class="course">Software Engineering</p>
+            <p class="task">Presentation</p>
+            <p class="meta">Due Thu · ~5 hours</p>
+          </div>
+          <div class="deadline-card reveal" style="border-left:3px solid var(--crunch);transition-delay:0.24s;">
+            <p class="course">Research Methods</p>
+            <p class="task">Report</p>
+            <p class="meta">Due Fri · ~8 hours</p>
+          </div>
+        </div>
+
+        <p class="callout"><strong>27 hours</strong> of work in one week — and nothing on any single calendar entry shows that until it's already happening.</p>
+      </div>
+
+      <div class="mini-chart-card reveal" style="transition-delay:0.15s;">
+        <p class="mini-chart-title">One week, four courses</p>
+        <div class="mini-bars">
+          <div class="mini-bar-col"><div class="mini-bar" style="height:34%;background:#3E7CB1;"></div><span>Mon</span></div>
+          <div class="mini-bar-col"><div class="mini-bar" style="height:14%;background:var(--border-light);"></div><span>Tue</span></div>
+          <div class="mini-bar-col"><div class="mini-bar" style="height:26%;background:var(--low);"></div><span>Wed</span></div>
+          <div class="mini-bar-col"><div class="mini-bar" style="height:20%;background:var(--mid);"></div><span>Thu</span></div>
+          <div class="mini-bar-col"><div class="mini-bar" style="height:100%;background:var(--crunch);"></div><span>Fri</span></div>
+        </div>
+        <p class="mini-chart-total">27h total, mostly landing on Friday</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tinted reveal">
+    <p class="section-label">What Research Tells Us</p>
+    <h2>The workload adds up.</h2>
+
+    <div class="stat-pair">
+      <div>
+        <p class="big-stat-num count-up" data-target="30" data-suffix="%" style="color:var(--crunch);">0%</p>
+        <p class="big-stat-label">of students reported high stress</p>
+      </div>
+      <div>
+        <p class="big-stat-num count-up" data-target="54" data-suffix="%" style="color:var(--mid);">0%</p>
+        <p class="big-stat-label">reported moderate stress</p>
+      </div>
+    </div>
+
+    <p class="lead">Students with more than three assessments due in a two-week window showed significantly higher perceived stress than students with fewer.</p>
+    <div class="source-card">168 students · United Arab Emirates University · 2026 · Farooq et al., PLOS One</div>
+
+    <p class="lead" style="margin-top:32px;">This matters specifically for Bandwidth: it isn't only how many deadlines students have. It's how closely those deadlines collide.</p>
+
+    <div class="compare-grid reveal" style="grid-template-columns: 1fr; max-width:420px;">
+      <div>
+        <p style="font-size:13px; color:var(--muted); margin:0 0 6px;">1–2 assessments in a window</p>
+        <div style="background:var(--low); height:10px; width:30%; border-radius:4px;"></div>
+      </div>
+      <div>
+        <p style="font-size:13px; color:var(--muted); margin:16px 0 6px;">3+ assessments in a window</p>
+        <div style="background:var(--crunch); height:10px; width:85%; border-radius:4px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">The Solution</p>
+    <h2>Meet Bandwidth.</h2>
+    <p class="lead">Your semester, visualized as workload — not just dates. Add your deadlines and Bandwidth builds a week-by-week skyline, flagging the weeks worth planning around before they arrive. <a href="dashboard.html" style="color:var(--crunch)">Try the dashboard →</a></p>
+
+    <div class="compare-grid reveal">
+      <div class="compare-card">
+        <h3>Your calendar</h3>
+        <p class="q">What's due?</p>
+        <div class="compare-row"><span>Mon</span><span>Database assignment</span></div>
+        <div class="compare-row"><span>Wed</span><span>ML lab</span></div>
+        <div class="compare-row"><span>Thu</span><span>Presentation</span></div>
+        <div class="compare-row" style="border-bottom:none;"><span>Fri</span><span>Research report</span></div>
+      </div>
+      <div class="vs">vs</div>
+      <div class="compare-card">
+        <h3>Bandwidth</h3>
+        <p class="q">How heavy is the week?</p>
+        <span class="load-badge-lg">High load</span>
+        <p style="font-size:24px; font-weight:700; margin:8px 0 0;">27 estimated hours</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Why It Matters</p>
+    <h2>See it coming.</h2>
+
+    <div class="flow-pair">
+      <div class="reveal">
+        <h4>Without workload visibility</h4>
+        <div class="flow without">
+          <span>Deadlines</span><span class="arrow">↓</span>
+          <span>Collision</span><span class="arrow">↓</span>
+          <span>Crunch week</span><span class="arrow">↓</span>
+          <span>Reactive planning</span><span class="arrow">↓</span>
+          <span>Stress</span>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.15s;">
+        <h4>With Bandwidth</h4>
+        <div class="flow with">
+          <span>Deadlines</span><span class="arrow">↓</span>
+          <span>Workload visibility</span><span class="arrow">↓</span>
+          <span>Early warning</span><span class="arrow">↓</span>
+          <span>Better planning</span><span class="arrow">↓</span>
+          <span>More control</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="closing reveal">Bandwidth turns an invisible workload collision into something students can see, understand, and act on before the crunch week arrives.</p>
+  </section>
+</div>
+
+<section class="closing-band reveal">
+  <div class="wrap closing-band-inner">
+    <p>See your semester before it sees you.</p>
+    <a href="dashboard.html" class="btn-primary btn-light">Get Started →</a>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>Built for DesignAthon 2026 · GDC RIT Dubai in partnership with +TWE</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

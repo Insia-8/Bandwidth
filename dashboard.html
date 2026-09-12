@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Semester — Bandwidth</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta property="og:title" content="Bandwidth — see your semester before it sees you" />
+<meta property="og:description" content="A week-by-week workload skyline for your semester, so crunch weeks show up before they happen." />
+<meta property="og:image" content="https://insia-8.github.io/Bandwidth/og-image.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://insia-8.github.io/Bandwidth/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="14" width="4" height="8" rx="1" fill="#4F9D6E"/>
+        <rect x="10" y="9" width="4" height="13" rx="1" fill="#E3AE3C"/>
+        <rect x="18" y="3" width="4" height="19" rx="1" fill="#D6483C"/>
+      </svg>
+      Bandwidth
+    </a>
+    <nav class="sidebar-nav">
+      <a href="index.html"><span class="dot-icon"></span>Home</a>
+      <a href="dashboard.html" class="active"><span class="dot-icon"></span>Dashboard</a>
+      <a href="problem-solution.html"><span class="dot-icon"></span>Problem &amp; Solution</a>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-header">
+      <div>
+        <h1>Your Semester</h1>
+        <p>Every deadline you've added, stacked into weeks so you can see what's coming.</p>
+      </div>
+      <button class="btn-primary" id="open-add-modal">+ Add Deadline</button>
+    </div>
+
+    <div class="card skyline-card">
+      <div class="skyline-card-head">
+        <p class="card-title" style="margin:0;">Workload skyline</p>
+        <div class="skyline-legend">
+          <span><span class="swatch" style="background:var(--low)"></span>Light</span>
+          <span><span class="swatch" style="background:var(--mid)"></span>Moderate</span>
+          <span><span class="swatch" style="background:var(--high)"></span>High</span>
+          <span><span class="swatch" style="background:var(--crunch)"></span>Critical</span>
+        </div>
+      </div>
+      <div class="skyline-svg-wrap" id="chart"></div>
+      <div class="skyline-labels" id="chart-labels"></div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="card">
+        <p class="stat-label">Total deadlines</p>
+        <p class="stat-value" id="stat-total">–</p>
+      </div>
+      <div class="card">
+        <p class="stat-label">High-load weeks</p>
+        <p class="stat-value crunch" id="stat-highweeks">–</p>
+        <p class="stat-sub">22h or more</p>
+      </div>
+      <div class="card">
+        <p class="stat-label">Avg. weekly workload</p>
+        <p class="stat-value" id="stat-avg">–</p>
+      </div>
+      <div class="card">
+        <p class="stat-label">Peak week</p>
+        <p class="stat-value" id="stat-peak">–</p>
+        <p class="stat-sub" id="stat-peak-sub"></p>
+      </div>
+    </div>
+
+    <div class="dash-lower">
+      <div class="card">
+        <p class="card-title">Upcoming deadlines</p>
+        <div id="course-legend"></div>
+        <div id="deadlines-list"></div>
+      </div>
+      <div class="card" id="week-detail"></div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <h3>Add a deadline</h3>
+      <button type="button" id="close-add-modal" aria-label="Close" style="background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;margin-top:-18px;">×</button>
+    </div>
+    <form id="add-form">
+      <div class="field">
+        <label for="f-course">Course</label>
+        <input type="text" id="f-course" placeholder="e.g. CS205" required />
+      </div>
+      <div class="field">
+        <label for="f-title">Assignment name</label>
+        <input type="text" id="f-title" placeholder="e.g. Database assignment" required />
+      </div>
+      <div class="field">
+        <label for="f-date">Due date</label>
+        <input type="date" id="f-date" required />
+      </div>
+      <div class="field">
+        <label for="f-hours">Estimated effort (hours)</label>
+        <input type="number" id="f-hours" min="0.5" step="0.5" placeholder="e.g. 6" required />
+      </div>
+      <p class="form-error" id="form-error"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="cancel-add-modal">Cancel</button>
+        <button type="submit" class="btn-primary">Save Deadline</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
